@@ -1,0 +1,56 @@
+{
+  "theme": {
+    "fonts": {
+      "largeTitle": {
+        "name": "SanFranciscoText-Regular",
+        "size": 24.0
+      },
+      "title1": {
+        "name": "SanFranciscoText-Regular",
+        "size": 20.0
+      },
+      "title2": {
+        "name": "SanFranciscoText-Regular",
+        "size": 19.0
+      },
+      "title3": {
+        "name": "SanFranciscoText-Regular",
+        "size": 18.0
+      },
+      "headline": {
+        "name": "SanFranciscoText-Regular",
+        "size": 18.0
+      },
+      "subheadline": {
+        "name": "SanFranciscoText-Regular",
+        "size": 17.0
+      },
+      "body": {
+        "name": "SanFranciscoText-Regular",
+        "size": 14.0
+      },
+      "callout": {
+        "name": "SanFranciscoText-Regular",
+        "size": 14.0
+      },
+      "caption1": {
+        "name": "SanFranciscoText-Regular",
+        "size": 12.0
+      },
+      "caption2": {
+        "name": "SanFranciscoText-Regular",
+        "size": 11.0
+      },
+      "footnote": {
+        "name": "SanFranciscoText-Regular",
+        "size": 10.0
+      }
+    },
+    "colors": {
+      "backgroundColor": "#ffffff",
+      "backgroundColor2": "#000000",
+      "textColor": "#C0CA33",
+      "tintColor": "#024D6F"
+    }
+  }
+}

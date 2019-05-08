@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Said</string>
+
+
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Settings</string>
+</resources>

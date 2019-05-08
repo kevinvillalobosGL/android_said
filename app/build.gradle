@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.gl.kev"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_ENDPOINT_URL", "\"https://jsonplaceholder.typicode.com\"")
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField("String", "BASE_ENDPOINT_URL", "\"https://jsonplaceholder.typicode.com\"")
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    //Jar Files
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlin_version"
+
+    //Android JetPack App Compat Version
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompat_version"
+
+    //Constraint Layout
+    implementation "androidx.constraintlayout:constraintlayout:1.1.3"
+
+    //Flexbox Layout
+    implementation "com.google.android:flexbox:1.1.0"
+
+    //Android Life Cycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycle_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    kapt "androidx.lifecycle:lifecycle-compiler:$rootProject.lifecycle_version"
+
+    //Material
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    //Legacy Support
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.legacySupportVersion"
+
+    //Room Database
+    api "androidx.room:room-runtime:$rootProject.room_version"
+    kapt "androidx.room:room-compiler:$rootProject.room_version"
+
+    //Dagger
+    implementation "com.google.dagger:dagger:$rootProject.dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$rootProject.dagger_version"
+
+    //Network
+    implementation "com.amitshekhar.android:rx2-android-networking:$rootProject.rx2Networking_version"
+
+    //RX
+    api "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroid_version"
+    api "io.reactivex.rxjava2:rxjava:$rootProject.rxjava_version"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$rootProject.picassoVersion"
+
+    //Timber Logger
+    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+
+    //GSON
+    implementation "com.google.code.gson:gson:$rootProject.gson_version"
+}

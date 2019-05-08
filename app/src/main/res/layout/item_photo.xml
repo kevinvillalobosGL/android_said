@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="mPhoto"
+                type="com.gl.kev.data.model.Photo"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_photo"
+            android:layout_width="@dimen/photo_item_size"
+            android:layout_height="@dimen/photo_item_size"
+            android:layout_margin="5dp"
+            android:elevation="2dp"
+            app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/img_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@{mPhoto.title}"
+                    android:transitionName="@{mPhoto.url}"
+                    app:imageUrl="@{mPhoto.thumbnailUrl}"
+                    tools:src="@tools:sample/backgrounds/scenic"/>
+
+            <LinearLayout
+                    android:layout_alignBottom="@id/img_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorDarkTransparent"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:text="@{mPhoto.title}"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:singleLine="true"
+                        tools:text="@string/title_home"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
