@@ -7,6 +7,7 @@ import com.gl.kev.di.module.RestApiModule
 import com.gl.kev.di.module.RoomDataBaseModule
 import com.gl.kev.ui.photo.PhotoDetailsViewModel
 import com.gl.kev.ui.main.MainViewModel
+import com.gl.kev.ui.sample.SampleViewModel
 import com.gl.kev.ui.todo.TodoDetailsViewModel
 import dagger.Component
 import javax.inject.Singleton
@@ -29,5 +30,7 @@ interface ApplicationComponent {
     fun inject(viewModel: PhotoDetailsViewModel)
 
     fun inject(viewModel: TodoDetailsViewModel)
+
+    fun inject(viewModel: SampleViewModel)
 
 }

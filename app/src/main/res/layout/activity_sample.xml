@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="mHandler"
+                type="com.gl.kev.ui.sample.SampleViewModel"/>
+
+        <variable
+                name="mModel"
+                type="com.gl.kev.data.model.Photo"/>
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.sample.SampleActivity">
+
+        <TextView
+                android:id="@+id/txt_sample"
+                android:layout_centerInParent="true"
+                android:text="@{mHandler.sampleText}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Hola"/>
+
+    </RelativeLayout>
+</layout>
