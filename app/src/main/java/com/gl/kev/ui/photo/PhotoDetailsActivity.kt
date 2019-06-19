@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.os.Bundle
+import android.widget.Toast
 import com.gl.kev.BR
 import com.gl.kev.R
 import com.gl.kev.databinding.ActivityPhotoDetailsBinding
@@ -41,6 +42,10 @@ class PhotoDetailsActivity : BaseActivity<ActivityPhotoDetailsBinding, PhotoDeta
                     ViewUtils.getIntFromColor(colorComponent, colorComponent, colorComponent),
                     PorterDuff.Mode.SRC_ATOP
                 )
+
+            if (offset > 0.5) {
+                Toast.makeText(this, "Collapsed", Toast.LENGTH_SHORT).show()
+            }
         })
 
         //Postpone Enter Transition

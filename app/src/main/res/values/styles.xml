@@ -6,6 +6,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorSurface">@color/colorSurface</item>
         <item name="android:windowContentTransitions">true</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -13,10 +14,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.NoActionBar.Full">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
 
     <style name="AppTheme.ToolbarStyle"/>
+
     <style name="AppTheme.ToolbarStyle.Collapsed">
         <item name="android:textColor">@color/colorPrimary</item>
     </style>

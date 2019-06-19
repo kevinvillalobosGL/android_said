@@ -6,6 +6,7 @@ import com.gl.kev.R
 import com.gl.kev.databinding.FragmentSettingsBinding
 import com.gl.kev.ui.base.BaseFragment
 import com.gl.kev.ui.main.MainViewModel
+import com.gl.kev.utils.ViewUtils
 
 /**
  * @author Gorilla Logic - <a href="mailto:kevin.villalobos@gorillalogic.com">Kevin Villalobos</a>
@@ -14,6 +15,9 @@ import com.gl.kev.ui.main.MainViewModel
 class SettingsFragment : BaseFragment<FragmentSettingsBinding, MainViewModel>() {
 
     override fun initViews() {
+        val text = "JR"
+        val drawable = ViewUtils.getDrawableFromText(activity!!, text, null, 1080, 1080)
+        mBinding.imvText.setImageDrawable(drawable)
     }
 
     override fun getLayout(): Int {
